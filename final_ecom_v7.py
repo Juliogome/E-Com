@@ -11,6 +11,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 import joblib
 
+@st.cache_data
+def generate_random_value(x): 
+  return random.uniform(0, x) 
+a = generate_random_value(10) 
+b = generate_random_value(20) 
+st.write(a) 
+st.write(b)
+
 st.title("Predicting the purchasing behavior of users on e-commerce site")
 st.sidebar.title("Table of contents")
 pages=["Project overview","Pre-Processing", "Data Vizualization","Feature Engineering and Modelling","Interpretation of Results","Conclusion"]
